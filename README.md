@@ -1,6 +1,6 @@
 # Project3_mushrooms
-I used a mushroom dataset I found on kaggle to try create an app where the user could enter physical characteristics 
-of their mushroom and the app would return an answer of edible (e) or poisonous (p).
+My inspiration for this project was two fold: 1, a trip to Italy a few years ago where I saw locals foraging for mushrooms in the forest in Abruzzo and also finding strange mushrooms in my backyard or when out hiking. I have always asked myself, "I wonder if this mushroom is edible?" </br>
+I used a mushroom csv dataset I found on kaggle to try create an app where the user could enter physical characteristics of their mushroom and the app would return an answer of edible (e) or poisonous (p). </br>
 The dataset consisted of string character values which made things difficult to run decision trees.
 Using get dummies we converted the X values which were all the characteristics into zeroes and ones (for present or not present and added extra columns).
 I left the string values for the Y which was the class column edible or poisonous.
