@@ -1,0 +1,74 @@
+<div class="login">
+<head>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About the Project</a></li>
+            <li><a href="characteristics.html">Mushroom Characteristics Information</a></li>
+            <li><a href="charts.html">Mushroom Statistics</a></li>
+            
+      
+          </ul>
+        </nav>
+</head>
+    <h1> Predict if the mushroom is edible or poisonous </h1>
+        <h3>Enter the following character values as per the descriptions below to predict if the mushroom is edible(e) or poisonous(p) </h3>
+        <h4>
+            cap-shape: bell=b, conical=c, convex=x, flat=f, knobbed=k, sunken=s <br>
+            cap-surface: fibrous=f, grooves=g, scaly=y, smooth=s<br>
+            cap-color: brown=n, buff=b, cinnamon=c, gray=g, green=r, pink=p, purple=u, red=e, white=w, yellow=y<br>
+            bruises: bruises=t, no=f<br>
+            odor: almond=a, anise=l, creosote=c, fishy=y, foul=f, musty=m, none=n, pungent=p, spicy=s<br>
+            gill-attachment: attached=a, descending=d, free=f, notched=n<br>
+            gill-spacing: close=c, crowded=w, distant=d<br>
+            gill-size: broad=b, narrow=n<br>
+            gill-color: black=k, brown=n, buff=b, chocolate=h, gray=g, green=r, orange=o, pink=p, purple=u, red=e, white=w, yellow=y<br>
+            stalk-shape: enlarging=e, tapering=t<br>
+            stalk-root: bulbous=b, club=c, cup=u, equal=e, rhizomorphs=z, rooted=r, missing=?<br>
+            stalk-surface-above-ring: fibrous=f, scaly=y, silky=k, smooth=s<br>
+            stalk-surface-below-ring: fibrous=f, scaly=y, silky=k, smooth=s<br>
+            stalk-color-above-ring: brown=n, buff=b, cinnamon=c, gray=g, orange=o, pink=p, red=e, white=w, yellow=y<br>
+            stalk-color-below-ring: brown=n, buff=b, cinnamon=c, gray=g, orange=o, pink=p, red=e, white=w, yellow=y<br>
+            veil-type: partial=p, universal=u<br>
+            veil-color: brown=n, orange=o, white=w, yellow=y<br>
+            ring-number: none=n, one=o, two=t<br>
+            ring-type: cobwebby=c, evanescent=e, flaring=f, large=l, none=n, pendant=p, sheathing=s, zone=z<br>
+            spore-print-color: black=k, brown=n, buff=b, chocolate=h, green=r, orange=o, purple=u, white=w, yellow=y<br>
+            population: abundant=a, clustered=c, numerous=n, scattered=s, several=v, solitary=y<br>
+            habitat: grasses=g, leaves=l, meadows=m, paths=p, urban=u, waste=w, woods=d<br>
+               
+        </h4>
+    
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="cap-shape" placeholder="Cap Shape" required="required" />
+        <input type="text" name="cap-surface" placeholder="Cap Surface" required="required" />
+        <input type="text" name="cap-color" placeholder="Cap Color" required="required" />
+        <input type="text" name="bruises" placeholder="Bruises" required="required" />
+        <input type="text" name="odor" placeholder="Odor" required="required" />
+        <input type="text" name="gill-attachment" placeholder="Gill Attachment" required="required" />
+        <input type="text" name="gill-spacing" placeholder="Gill Spacing" required="required" />
+        <input type="text" name="gill-size" placeholder="Gill Size" required="required" />
+        <input type="text" name="gill-color" placeholder="Gill Color" required="required" />
+        <input type="text" name="stalk-shape" placeholder="Stalk Shape" required="required" />
+        <input type="text" name="stalk-root" placeholder="Stalk Root" required="required" />
+        <input type="text" name="stalk-surface-above-ring" placeholder="Stalk Surface Above Ring" required="required" />
+        <input type="text" name="stalk-surface-below-ring" placeholder="Stalk Surface Below Ring" required="required" />
+        <input type="text" name="stalk-color-above-ring" placeholder="Stalk Color Above Ring" required="required" />
+        <input type="text" name="stalk-color-below-ring" placeholder="Stalk Color Below Ring" required="required" />
+        <input type="text" name="veil-type" placeholder="Veil Type" required="required" />
+        <input type="text" name="veil-color" placeholder="Veil Color" required="required" />
+        <input type="text" name="ring-number" placeholder="Ring Number" required="required" />
+        <input type="text" name="ring-type" placeholder="Ring Type" required="required" />
+        <input type="text" name="spore-print-color" placeholder="Spore Print Color" required="required" />
+        <input type="text" name="population" placeholder="Population" required="required" />
+        <input type="text" name="habitat" placeholder="Habitat" required="required" />
+
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+<br>
+<br>
+{{ prediction_text }}
+    
+</div>
