@@ -15,4 +15,4 @@ I tried to deploy the html files I had made even if the model page was not worki
 The app passed the build, release and deploy stages, however unfortunately when I went to view it, it came up with an application error.  
 
 If I had more time I would work on the following things to improve this project:  
-Use CSS styling to beautify the website, I would create more user friendly inputs such as a colour wheel or cap shape images to select from on the model webpage, I would try using another database such as SQLite to see if that would get the app working and troubleshoot the application error on Heroku.
+Use CSS styling to beautify the website, I would create more user friendly inputs such as a colour wheel or cap shape images to select from on the model webpage, improve the formatting on the charts so users don’t have to refer to the legend down the bottom, I would try using another database such as SQLite to see if that would get the app working and troubleshoot the application error on Heroku.
